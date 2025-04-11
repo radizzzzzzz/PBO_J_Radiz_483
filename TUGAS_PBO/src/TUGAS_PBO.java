@@ -4,6 +4,9 @@ public class TUGAS_PBO {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
+        Admin admin = new Admin();
+        Mahasiswa mahasiswa = new Mahasiswa();
+
         System.out.println("pilih login : ");
         System.out.println("1. admin");
         System.out.println("2. mahasiswa");
@@ -17,11 +20,8 @@ public class TUGAS_PBO {
             System.out.print("masukkan password: ");
             String pass = scanner.nextLine();
 
-            String validuser = "admin483";
-            String validpass = "password483";
-
-            if(user.equals(validuser) && pass.equals(validpass)){
-                System.out.println("login berhasil");
+            if(admin.login(user, pass)){
+                System.out.println("login admin berhasil");
             }else{
                 System.out.println("login gagal, username atau password salah");
             }
@@ -29,17 +29,12 @@ public class TUGAS_PBO {
             System.out.print("masukkan nama: ");
             String nama = scanner.nextLine();
             System.out.print("masukkan NIM: ");
-            String password = scanner.nextLine();
+            String nim = scanner.nextLine();
 
-            String validnama = "syauqi iwan faradiz";
-            String validpassword = "202410370110483";
-
-            if(nama.equals(validnama) && password.equals(validpassword)){
-                System.out.println("login mahasiswa berhasil");
-                System.out.println("nama :" + validnama);
-                System.out.println("NIM: " +validpassword);
+            if(mahasiswa.login(nama, nim)){
+                mahasiswa.tampilkaninfo();
             }else{
-                System.out.println("login gagal, username atau NIM salah");
+                System.out.println("login gagal, nama atau nim salah");
             }
         }else{
             System.out.println("pilihan tidak valid");
