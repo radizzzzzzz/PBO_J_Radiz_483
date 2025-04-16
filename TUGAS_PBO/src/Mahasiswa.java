@@ -1,13 +1,13 @@
-public class Mahasiswa {
-    private final String nama = "syauqi iwan faradiz";
-    private final String nim = "202410370110483";
-
+public class Mahasiswa extends User {
+    public Mahasiswa(String nama, String nim){
+        super(nama, nim);
+    }
     public boolean login(String inputnama, String inputnim){
-        return inputnama.equalsIgnoreCase(nama)&&inputnim.equals(nim);
+        return inputnama.equalsIgnoreCase(getNama())&&inputnim.equals(getNim());
     }
     public void tampilkaninfo(){
         System.out.println("login mahasiswa berhasil");
-        System.out.println("nama : "+nama);
-        System.out.println("NIM : "+nim);
+        System.out.println("nama : "+getNama());
+        System.out.println("NIM : "+getNim());
     }
 }

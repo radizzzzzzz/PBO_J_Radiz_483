@@ -4,8 +4,8 @@ public class TUGAS_PBO {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        Admin admin = new Admin();
-        Mahasiswa mahasiswa = new Mahasiswa();
+        Admin admin = new Admin("pak admin", "radiz936", "admin483", "password483");
+        Mahasiswa mahasiswa = new Mahasiswa("syauqi iwan faradiz", "202410370110483");
 
         System.out.println("pilih login : ");
         System.out.println("1. admin");
@@ -21,7 +21,7 @@ public class TUGAS_PBO {
             String pass = scanner.nextLine();
 
             if(admin.login(user, pass)){
-                System.out.println("login admin berhasil");
+                admin.displayinfo();
             }else{
                 System.out.println("login gagal, username atau password salah");
             }
@@ -32,7 +32,7 @@ public class TUGAS_PBO {
             String nim = scanner.nextLine();
 
             if(mahasiswa.login(nama, nim)){
-                mahasiswa.tampilkaninfo();
+                mahasiswa.displayinfo();
             }else{
                 System.out.println("login gagal, nama atau nim salah");
             }
