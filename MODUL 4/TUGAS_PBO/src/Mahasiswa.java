@@ -5,8 +5,7 @@ public class Mahasiswa extends User {
     public boolean login(String inputnama, String inputnim){
         return inputnama.equalsIgnoreCase(getNama())&&inputnim.equals(getNim());
     }
-    @Override
-    public void displayinfo(){
+    public void tampilkaninfo(){
         System.out.println("login mahasiswa berhasil");
         System.out.println("nama : "+getNama());
         System.out.println("NIM : "+getNim());

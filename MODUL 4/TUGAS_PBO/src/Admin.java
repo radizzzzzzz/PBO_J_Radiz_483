@@ -1,6 +1,6 @@
 public class Admin extends User {
-    private final String username;
-    private final String password;
+    private String username;
+    private String password;
 
     public Admin(String nama, String nim, String username, String password){
         super(nama, nim);
@@ -8,10 +8,10 @@ public class Admin extends User {
         this.password = password;
     }
 
-    @Override
     public boolean login(String inputuser, String inputpass){
         return inputuser.equals(username)&&inputpass.equals(password);
     }
+
     @Override
     public void displayinfo(){
         System.out.println("login admin berhasil");

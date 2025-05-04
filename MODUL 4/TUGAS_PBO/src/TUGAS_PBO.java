@@ -4,7 +4,7 @@ public class TUGAS_PBO {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        Admin admin = new Admin("radiz", "radiz936", "admin483", "password483");
+        Admin admin = new Admin("pak admin", "radiz936", "admin483", "password483");
         Mahasiswa mahasiswa = new Mahasiswa("syauqi iwan faradiz", "202410370110483");
 
         System.out.println("pilih login : ");

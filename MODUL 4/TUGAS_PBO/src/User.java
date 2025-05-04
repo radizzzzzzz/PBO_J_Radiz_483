@@ -23,7 +23,7 @@ public class User{
         this.nim = nim;
     }
 
-    public boolean login(String inputuser, String inputpass){
+    public boolean login(){
         return false;
     }
 
